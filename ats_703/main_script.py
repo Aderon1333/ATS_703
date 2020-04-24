@@ -1,3 +1,4 @@
+#этот файл - объединение Artem_Krytsin.py и Yakushenkov_Konstantin.py
 import os
 import json
 import codecs
