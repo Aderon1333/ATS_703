@@ -154,10 +154,12 @@ def Preload():
 #расстояние Левенштейна
 def Levenshtein(comparedString1, comparedString2):
     n, m = len(comparedString1), len(comparedString2)
+
     if n > m:
         comparedString1, comparedString2 = comparedString2, comparedString1
         n, m = m, n
     current_row = range(n + 1)
+
     for i in range(1, m + 1):
         previous_row, current_row = current_row, [i] + [0] * n
         for j in range(1, n + 1):
@@ -165,6 +167,7 @@ def Levenshtein(comparedString1, comparedString2):
             if comparedString1[j - 1] != comparedString2[i - 1]:
                 change += 1
             current_row[j] = min(add, delete, change)
+
     return current_row[n]
 
 #применение этого расстояния
@@ -172,28 +175,34 @@ def CompareStrings(name_counter):
     i = 0
     comparedName = ''
     comparedSurname = ''
+
     while result[0][i] != '_':
         comparedSurname = comparedSurname + result[0][i]
         i = i + 1
     i = i + 1
+
     while result[0][i] != '\n':
         comparedName = comparedName + result[0][i]
         i = i + 1
     i = 0
     perfectName = ''
     perfectSurname = ''
+
     while studentsList[name_counter][i] != '_':
         perfectSurname = perfectSurname + studentsList[name_counter][i]
         i = i + 1
     i = i + 1
+
     while studentsList[name_counter][i] != '\n':
         perfectName = perfectName + studentsList[name_counter][i]
         i = i + 1
+
     i = 0
     dist1 = Levenshtein(comparedName,perfectName)
     dist2 = Levenshtein(comparedSurname, perfectSurname)
     dist3 = Levenshtein(comparedName, perfectSurname)
     dist4 = Levenshtein(comparedSurname, perfectName)
+
     if ((global_a[0] != '9') and (global_a[0] != '1')):
         if((dist1 != 0) and (dist2 != 0)):
             if(dist1 < dist3):
@@ -218,6 +227,7 @@ def CompareStrings(name_counter):
                         global_a[1] = name_counter + 2
     else:
         pass
+
     if (studentsList[name_counter] != 'Якушенков_Константин\n'):
         name_counter = name_counter + 1
         CompareStrings(name_counter)
@@ -419,7 +429,7 @@ def WriterXLSX():
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
-        
+
     if result[2] == '6_2':
         temp_cell = 'AD'
         temp_cell = temp_cell + str(global_a[1])
@@ -464,8 +474,6 @@ studentsList.append('Якушенков_Константин\n')
 
 Preload()
 
-
-
 name_counter = 0
 
 global_a = []
@@ -473,6 +481,7 @@ global_a.append(5)
 global_a.append(0)
 
 CompareStrings(name_counter) 
+
 if(global_a[1] != 0):   
     WriterXLSX()
 
