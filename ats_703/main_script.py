@@ -230,168 +230,196 @@ def WriterXLSX():
     temp_cell = 'B'
     temp_cell = temp_cell + str(global_a[1])
     worksheet[temp_cell] =  result[1]
+
     if result[2] == '1_1':
         temp_cell = 'C'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '1_2':
         temp_cell = 'D'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '1_3':
         temp_cell = 'E'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '1_4':
         temp_cell = 'F'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '1_5':
         temp_cell = 'G'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '2_1':
         temp_cell = 'H'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '2_2':
         temp_cell = 'I'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '2_3':
         temp_cell = 'J'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '2_4':
         temp_cell = 'K'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '2_5':
         temp_cell = 'L'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '3_1':
         temp_cell = 'M'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '3_2':
         temp_cell = 'N'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '3_3':
         temp_cell = 'O'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '3_4':
         temp_cell = 'P'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '3_5':
         temp_cell = 'Q'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '4_6':
         temp_cell = 'R'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '4_7':
         temp_cell = 'S'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '4_8':
         temp_cell = 'T'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '4_9':
         temp_cell = 'U'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '5_4':
         temp_cell = 'V'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '5_5':
         temp_cell = 'W'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '5_6':
         temp_cell = 'X'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+        
     if result[2] == '5_7':
         temp_cell = 'Y'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '5_8':
         temp_cell = 'Z'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '5_9':
         temp_cell = 'AA'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '5_10':
         temp_cell = 'AB'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+
     if result[2] == '6_1':
         temp_cell = 'AC'
         temp_cell = temp_cell + str(global_a[1])
         worksheet[temp_cell] =  result[3]
         comment = Comment(result[4], "Results")
         worksheet[temp_cell].comment = comment
+        
     if result[2] == '6_2':
         temp_cell = 'AD'
         temp_cell = temp_cell + str(global_a[1])
