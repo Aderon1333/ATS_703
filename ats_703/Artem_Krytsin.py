@@ -13,6 +13,9 @@ gcc_command = "%s *.c *.h" % gcc_path
 
 gpp_path = "C:/MinGW/bin/g++.exe"
 gpp_command = "%s *.c *.h" % gpp_path
+
+msbuild_path = "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/msbuild.exe"
+msbuild_command = "msbuild"
 #-----------------------------------------------------------------------------------
 #парсер файла main
 data_from_file = [] #подумать как расположить поудобнее
@@ -40,7 +43,7 @@ def file_parser(student_index, file_name, file_path):
 with open(os.getcwd() + "\\ats_703\\students_database.json") as json_file:
     students_database = json.load(json_file)
 #-----------------------------------------------------------------------------------
-#достаем Ф.И. всех студентов из json файла
+#достаем Ф.И. всех заданий из json файла
 with open(os.getcwd() + "\\ats_703\\exercises_database.json") as json_file:
     exercises_database = json.load(json_file)
 #-----------------------------------------------------------------------------------
@@ -85,20 +88,30 @@ for loc_i in range(len(students)):
 
     for loc_e in range(len(exercises_folder)):
         exercise_folder = []
+        compiler_check = 0
         each_exercise_folder_path = student_directory + "\\" + exercises_folder[loc_e]
         exercise_directory_tree = os.walk(each_exercise_folder_path)
         for loc_g in each_exercise_folder_path:
             exercise_folder.append(loc_g)
         for address, dirs, files in student_folder:
             for file in files:
-                base = os.path.splitext(file)[0]
+                base, file_extension = os.path.splitext(file)
                 if(base == 'main'):
                     file_parser(loc_i, file, each_exercise_folder_path)
+                #переменная compiler_check:
+                #1-msbuild
+                #2-g++
+                if(file_extension == '.sln'):
+                    compiler_check += 1
 
         curr_path = os.getcwd()
         os.chdir(each_exercise_folder_path)
+
         #вызов компилятора с++ (вставить switch)
-        process = subprocess.Popen(gpp_command)
+        if(compiler_check != 0):
+            process = subprocess.Popen(msbuild_command)
+        else:
+            process = subprocess.Popen(gpp_command)
 
         returncode = process.wait()
         print(returncode)
